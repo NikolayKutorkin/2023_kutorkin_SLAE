@@ -8,10 +8,9 @@ TEST(Tridiag_matrix_alg, 3_3){
 
     std::vector<double> x = tridiagonal_matrix_algorithm(t, d);
 
-    /*for (unsigned i = 0; i < x.size(); i ++) {
-        ASSERT_NEAR(x[i], answer[i], 1e-9);
-    }*/
-    ASSERT_NEAR(x[0], answer[0], 0.1) << "aaaaaa";
+    for (unsigned i = 0; i < x.size(); i ++) {
+        ASSERT_TRUE(0.1 > answer[i] - x[i]);
+    }
     
 }
 

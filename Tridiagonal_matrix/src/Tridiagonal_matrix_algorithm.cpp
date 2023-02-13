@@ -1,7 +1,7 @@
 #include "Tridiagonal_matrix.cpp"
 
 template <typename T>
-std::vector<T> tridiagonal_matrix_algorithm (TridiagonalMatrix<T> tm, std::vector<T> d){
+std::vector<T> tridiagonal_matrix_algorithm (const TridiagonalMatrix<T>& tm, const std::vector<T>& d){
     unsigned N = tm.get_size();
     
     std::vector<T> p, q;
