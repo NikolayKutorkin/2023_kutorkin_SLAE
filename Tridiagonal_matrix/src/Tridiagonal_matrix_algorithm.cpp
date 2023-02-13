@@ -26,14 +26,3 @@ std::vector<T> tridiagonal_matrix_algorithm (TridiagonalMatrix<T> tm, std::vecto
 
     return x;
 }
-
-int main() {
-    TridiagonalMatrix<double> t = {1, 2, 0, 3, 4, 5, 0, 6, 7};
-    std::cout << t;
-    std::vector<double> d = {1, 2, 3};
-    std::vector<double> x = tridiagonal_matrix_algorithm(t, d);
-    for (auto item: x){
-        std::cout << item << ' ';
-    }
-    return 0;
-}
