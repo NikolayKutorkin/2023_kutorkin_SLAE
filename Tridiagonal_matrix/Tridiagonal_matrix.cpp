@@ -18,18 +18,18 @@ public:
     TridiagonalMatrix() = default;
     TridiagonalMatrix(unsigned int size){
         this->size = size;
-        data.resize(size);
+        data.reserve(size);
     }
     TridiagonalMatrix(std::initializer_list<T> l) {
         this->size = l.size() / 3;
-        data.resize(size);
+        data.reserve(size);
         unsigned int i = 0;
         for(auto it = l.begin(); i <= size * 3 - 3; i += 3){
             Triplet<T> t;
             t.a = *(it + i);
             t.b = *(it + i + 1);
             t.c = *(it + i + 2);
-            data[i / 3] = t;
+            data.push_back(t);
         }
 
     }
@@ -51,4 +51,6 @@ public:
 
 
 };
+
+
 
