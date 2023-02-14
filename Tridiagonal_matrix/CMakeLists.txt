@@ -6,4 +6,4 @@ add_library(Tridiagonal_matrix_algorithm src/Tridiagonal_matrix.cpp src/Tridiago
 
 add_executable(testing tests/test.cpp)
 
-target_link_libraries(testing PUBLIC Tridiagonal_matrix_algorithm gtest pthread)
+target_link_libraries(testing Tridiagonal_matrix_algorithm gtest pthread)
