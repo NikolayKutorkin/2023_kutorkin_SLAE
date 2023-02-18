@@ -2,5 +2,5 @@ cmake_minimum_required(VERSION 3.16)
 
 project(Tridiagonal_matrix)
 
-file(GLOB_RECURSE source *.hpp *.h *.cpp)
-add_library(Tridiagonal_matrix INTERFACE ${source})
+file(GLOB_RECURSE src *.hpp *.h *.cpp)
+add_library(Tridiagonal_matrix INTERFACE ${src})
