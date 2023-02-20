@@ -1,4 +1,4 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "../src/Tridiagonal_matrix_algorithm.cpp"
 
 TEST(Tridiag_matrix_alg, 3_3){
@@ -14,7 +14,7 @@ TEST(Tridiag_matrix_alg, 3_3){
     
 }
 
-int main(int argc, char **argv) {
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
+// int main(int argc, char **argv) {
+//     testing::InitGoogleTest(&argc, argv);
+//     return RUN_ALL_TESTS();
+// }
