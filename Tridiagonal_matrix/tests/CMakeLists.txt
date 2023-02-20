@@ -1,11 +1,6 @@
-cmake_minimum_required(VERSION 3.16)
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+add_subdirectory(Google_tests/lib)
 
-project(Testing_tridiagonal_matrix)
-
-file(GLOB files "*.cpp")
-foreach(filename ${files})
-    get_filename_component (TName ${filename} NAME_WE)
-    add_executable("${TName}" ${filename})
-    add_test(NAME "${TName}" COMMAND ${filename})
-    target_link_libraries(${TName} slae gtest gtest_main)
-endforeach()
+add_executable(test_1 test.cpp)
+add_test(test_1 COMMAND test.cpp)
+target_link_libraries(test_1 gtest gtest_main)
